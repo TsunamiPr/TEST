@@ -26,7 +26,12 @@ namespace App2
         {
             this.InitializeComponent();
 
-            gggghg
+       
+        }
+
+        private void ShowName(object sender, RoutedEventArgs e)
+        {
+            greetingOutput.Text = "Hello, " + nameInput.Text + "!";
         }
     }
 }
