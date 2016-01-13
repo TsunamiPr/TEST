@@ -25,6 +25,8 @@ namespace App2
         public MainPage()
         {
             this.InitializeComponent();
+
+            gggghg
         }
     }
 }
