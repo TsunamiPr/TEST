@@ -25,7 +25,7 @@ namespace App2
         public MainPage()
         {
             this.InitializeComponent();
-            var theme = Application.Current.RequestedTheme;
+            var theme = Resources.
             if (theme.ToString().Equals("Light"))
             {
                 Textview.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
@@ -34,6 +34,8 @@ namespace App2
             {
                 Textview.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
             }
+
+          
 
         }
 
