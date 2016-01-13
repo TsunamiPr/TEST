@@ -28,9 +28,9 @@ namespace App2
 
         }
 
-        private void inputButton_Click(object sender, RoutedEventArgs e)
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-            greetingOutput.Text = "Hello " + nameInput.Text;
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
     }
 }
