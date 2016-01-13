@@ -7,26 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel x:Name="contentPanel" Margin="8,32,0,0">
-            <TextBlock Text="Hello, world!" Margin="0,0,0,40"/>
-            <TextBlock Text="What's your name?"/>
-            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,0,10,0" RenderTransformOrigin="0.975,0.504">
-                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="inputButton_Click" RenderTransformOrigin="0.564,4.368"/>
-                <TextBox x:Name="nameInput" Margin="10,2,10,-1" Canvas.ZIndex="10" HorizontalAlignment="Left" MinWidth="200" MaxWidth="280" TextWrapping="Wrap">
-                    <TextBox.Projection>
-                        <PlaneProjection LocalOffsetX="10" LocalOffsetZ="7"/>
-                    </TextBox.Projection>
-                </TextBox>
+    <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
+                CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE825;"
+                     Width="50" Height="50" Background="Transparent"/>
+                    <TextBlock Text="Button 1" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                         Width="50" Height="50" Background="Transparent"/>
+                    <TextBlock Text="Button 2" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                         Width="50" Height="50" Background="Transparent"/>
+                    <TextBlock Text="Button 3" FontSize="18" VerticalAlignment="Center" />
+                </StackPanel>
             </StackPanel>
-            <TextBlock x:Name="greetingOutput"/>
-            <SplitView Height="100">
-                <SplitView.Pane>
-                    <Grid/>
-                </SplitView.Pane>
-                <Grid/>
-            </SplitView>
-        </StackPanel>
-    </Grid>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid>
+                <TextBlock Text="SplitView Basic" FontSize="54" Foreground="White"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </SplitView.Content>
+    </SplitView>
+
 
 </Page>
