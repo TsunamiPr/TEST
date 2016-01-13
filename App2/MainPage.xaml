@@ -20,6 +20,12 @@
                 </TextBox>
             </StackPanel>
             <TextBlock x:Name="greetingOutput"/>
+            <SplitView Height="100">
+                <SplitView.Pane>
+                    <Grid/>
+                </SplitView.Pane>
+                <Grid/>
+            </SplitView>
         </StackPanel>
     </Grid>
 
