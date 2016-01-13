@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,10 +23,26 @@ namespace App2
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage()
+      public MainPage()
         {
             this.InitializeComponent();
+            //   var themesetting = Windows.UI.Xaml.ElementTheme.Default;
 
+            HideSts();
+
+
+
+
+        }
+
+       async private void HideSts()
+        {
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+            {
+                Windows.UI.ViewManagement.StatusBar statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+                await statusBar.HideAsync();
+
+            }
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
