@@ -11,12 +11,16 @@
         <StackPanel x:Name="contentPanel" Margin="8,32,0,0">
             <TextBlock Text="Hello, world!" Margin="0,0,0,40"/>
             <TextBlock Text="What's your name?"/>
-            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-                <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="ShowName"/>
+            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,0,10,0" RenderTransformOrigin="0.975,0.504">
+                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="inputButton_Click" RenderTransformOrigin="0.564,4.368"/>
+                <TextBox x:Name="nameInput" Margin="10,2,10,-1" Canvas.ZIndex="10" HorizontalAlignment="Left" MinWidth="200" MaxWidth="280" TextWrapping="Wrap">
+                    <TextBox.Projection>
+                        <PlaneProjection LocalOffsetX="10" LocalOffsetZ="7"/>
+                    </TextBox.Projection>
+                </TextBox>
             </StackPanel>
             <TextBlock x:Name="greetingOutput"/>
         </StackPanel>
     </Grid>
-    
+
 </Page>

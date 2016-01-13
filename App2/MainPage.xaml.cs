@@ -26,12 +26,11 @@ namespace App2
         {
             this.InitializeComponent();
 
-       
         }
 
-        private void ShowName(object sender, RoutedEventArgs e)
+        private void inputButton_Click(object sender, RoutedEventArgs e)
         {
-            greetingOutput.Text = "Hello, " + nameInput.Text + "!";
+            greetingOutput.Text = "Hello " + nameInput.Text;
         }
     }
 }
