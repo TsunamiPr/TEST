@@ -12,8 +12,8 @@
             <TextBlock Text="Hello, world!" Margin="0,0,0,40"/>
             <TextBlock Text="What's your name?"/>
             <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-                <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="ShowName"/>
+                <TextBox x:Name="nameInput" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" Margin="20,0"/>
+                <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="ShowName" Margin="10,0"/>
             </StackPanel>
             <TextBlock x:Name="greetingOutput"/>
         </StackPanel>
